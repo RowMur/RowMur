@@ -2,7 +2,7 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-nav {
+#navBar {
   background-color: #27285c;
   display: flex;
   flex-direction: row;
