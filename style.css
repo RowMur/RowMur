@@ -1,3 +1,9 @@
-h1 {
-  background-color: aqua;
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+  background-color: #27285c;
+  display: flex;
+  flex-direction: row;
 }
