@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Content = () => {
   return (
     <StyledContent>
-      <p>
+      <StyledProfile>
         Last academic year I was at Durham University studying mathematics. I
         made the decision to leave the University after completing two terms
         having realised that the course wasn’t for me after all. However I
@@ -12,7 +12,7 @@ const Content = () => {
         online courses and resources, mainly Codecademy on which I’ve completed
         a python course and am working through the “Full-Stack Engineer” career
         path. I’ve been exposed to html, css, javascript and c also.
-      </p>
+      </StyledProfile>
       <StyledSection>
         <SectionHeader>Work Experience</SectionHeader>
         <SectionSubTitle>
@@ -109,13 +109,17 @@ const Content = () => {
 };
 
 const StyledContent = styled.main`
-  width: 100%;
+  width: calc(100% - 40px);
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 12px 20px;
   align-items: center;
+`;
+
+const StyledProfile = styled.p`
+  width: auto;
 `;
 
 const StyledSection = styled.a`
