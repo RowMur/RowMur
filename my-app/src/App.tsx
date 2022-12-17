@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "./header";
-import Content from "./content";
 import Footer from "./footer";
 import WorkExperience from "./pages/workExperience";
 import Profile from "./pages/Profile";
@@ -10,7 +9,7 @@ import SkillsAchievements from "./pages/skillsAchievements";
 import AboutMe from "./pages/aboutMe";
 
 function App() {
-  const [page, setPage] = useState(<Content />);
+  const [page, setPage] = useState(<Profile />);
 
   const handleClick = (i: number) => {
     const pages = [
