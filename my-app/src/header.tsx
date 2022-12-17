@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
-const Header = () => {
+type headerType = {
+  onClick: (i: number) => JSX.Element;
+};
+
+const Header = (props: headerType) => {
   return (
     <StyledHeader>
-      <StyledTitle>Rowan Murray</StyledTitle>
+      <StyledTitle onClick={() => props.onClick(0)}>Rowan Murray</StyledTitle>
       <StyledNav>
-        <StyledOptions>Work Experience</StyledOptions>
-        <StyledOptions>Education</StyledOptions>
-        <StyledOptions>Skills and Achievements</StyledOptions>
-        <StyledOptions>About Me</StyledOptions>
+        <StyledOptions onClick={() => props.onClick(1)}>
+          Work Experience
+        </StyledOptions>
+        <StyledOptions onClick={() => props.onClick(2)}>
+          Education
+        </StyledOptions>
+        <StyledOptions onClick={() => props.onClick(3)}>
+          Skills and Achievements
+        </StyledOptions>
+        <StyledOptions onClick={() => props.onClick(4)}>About Me</StyledOptions>
       </StyledNav>
     </StyledHeader>
   );
@@ -20,7 +30,9 @@ const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 12px;
+  padding: 12px 0px;
+  background-color: #202020;
+  align-items: center;
 `;
 
 const StyledNav = styled.a`
@@ -31,17 +43,17 @@ const StyledNav = styled.a`
   justify-content: flex-end;
   align-items: stretch;
   gap: 10px;
-  margin: 0px 12px 0px 12px;
+  margin: 0px 24px 0px 12px;
 `;
 
 const StyledOptions = styled.a`
   height: auto;
   width: auto;
   padding: 5px;
+  margin: 5px;
   border: 2px;
   border-style: solid;
-  margin: 5px;
-  border-color: #2e424d;
+  border-color: #202020;
   &:hover {
     border-bottom-color: #5b8291;
     cursor: pointer;
@@ -50,7 +62,10 @@ const StyledOptions = styled.a`
 
 const StyledTitle = styled.p`
   font-size: 24px;
-  margin: 0px;
+  margin: 0px 24px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Header;

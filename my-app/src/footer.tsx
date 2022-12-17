@@ -15,6 +15,11 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: stretch;
   gap: 10px;
+  min-height: 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #202020;
 `;
 
 const FooterContent = styled.a`
