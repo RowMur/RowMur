@@ -4,8 +4,8 @@ import Header from "./header";
 import Footer from "./footer";
 import WorkExperience from "./pages/workExperience";
 import Profile from "./pages/Profile";
-import Education from "./pages/education";
-import SkillsAchievements from "./pages/skillsAchievements";
+import Education from "./pages/personalProjects";
+import EducationSkills from "./pages/educationSkills";
 import AboutMe from "./pages/aboutMe";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Profile />,
       <WorkExperience />,
       <Education />,
-      <SkillsAchievements />,
+      <EducationSkills />,
       <AboutMe />,
     ];
     setPage((page) => pages[i]);

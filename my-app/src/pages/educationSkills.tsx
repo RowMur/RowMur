@@ -2,11 +2,11 @@ import React from "react";
 import {
   StyledSection,
   SectionHeader,
-  SectionSubTitle,
   SectionContent,
+  SectionSubTitle,
 } from "./pageStyles";
 
-const Education = () => {
+const EducationSkills = () => {
   return (
     <StyledSection>
       <SectionHeader>Education</SectionHeader>
@@ -40,8 +40,16 @@ const Education = () => {
         11 grades 6-9; including a 9 in Mathematics, A in ICT and an A in
         Statistics.
       </SectionContent>
+      <SectionHeader>Skills and Achievements</SectionHeader>
+      <SectionContent>
+        2021 Full UK Driving License
+        <br />
+        2020 Duke of Edinburgh - Silver Award
+        <br />
+        2019 Sports Leadership Qualification - Level 1
+      </SectionContent>
     </StyledSection>
   );
 };
 
-export default Education;
+export default EducationSkills;

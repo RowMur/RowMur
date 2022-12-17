@@ -13,10 +13,10 @@ const Header = (props: headerType) => {
           Work Experience
         </StyledOptions>
         <StyledOptions onClick={() => props.onClick(2)}>
-          Education
+          Personal Projects
         </StyledOptions>
         <StyledOptions onClick={() => props.onClick(3)}>
-          Skills and Achievements
+          Skills and Education
         </StyledOptions>
         <StyledOptions onClick={() => props.onClick(4)}>About Me</StyledOptions>
       </StyledNav>
