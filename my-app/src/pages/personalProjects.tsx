@@ -1,7 +1,7 @@
 import React from "react";
 
-const Education = () => {
+const PersonalProjects = () => {
   return <div></div>;
 };
 
-export default Education;
+export default PersonalProjects;

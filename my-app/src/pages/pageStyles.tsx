@@ -10,10 +10,6 @@ export const StyledContent = styled.main`
   align-items: center;
 `;
 
-export const StyledProfile = styled.p`
-  width: auto;
-`;
-
 export const StyledSection = styled.a`
   display: flex;
   flex-direction: column;
@@ -30,4 +26,6 @@ export const SectionSubTitle = styled.a`
 
 export const SectionContent = styled.a`
   color: #eaebed;
+  display: flex;
+  flex-direction: column;
 `;

@@ -4,7 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 import WorkExperience from "./pages/workExperience";
 import Profile from "./pages/Profile";
-import Education from "./pages/personalProjects";
+import PersonalProjects from "./pages/personalProjects";
 import EducationSkills from "./pages/educationSkills";
 import AboutMe from "./pages/aboutMe";
 
@@ -15,7 +15,7 @@ function App() {
     const pages = [
       <Profile />,
       <WorkExperience />,
-      <Education />,
+      <PersonalProjects />,
       <EducationSkills />,
       <AboutMe />,
     ];
@@ -33,8 +33,8 @@ function App() {
 }
 
 const StyledApp = styled.div`
-  color: #cfd2d8;
-  background-color: #303030;
+  color: #dfdce3;
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   position: relative;
