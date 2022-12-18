@@ -28,6 +28,10 @@ const Profile = () => {
           src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png"
           alt="Python"
         />
+        <TechImg
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/512px-GraphQL_Logo.svg.png?20161105194737"
+          alt="GraphQL"
+        />
       </TechBar>
       <StyledProfile>
         I am currently working as a Junior Applications Engineer in the
@@ -83,12 +87,12 @@ const TechBar = styled.a`
 const TechImg = styled.img`
   height: 64px;
   width: auto;
-  margin: 1vh 1vh;
+  margin: 1vh;
 `;
 
 const StyledProfile = styled.p`
   width: auto;
-  margin: 0px;
+  margin: 0px 0px 20px 0px;
 `;
 
 export default Profile;
