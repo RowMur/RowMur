@@ -51,6 +51,7 @@ const StyledFooter = styled.footer`
   bottom: 0;
   width: 100%;
   background-color: #202020;
+  height: 8vh;
 `;
 
 const FooterContent = styled.a`

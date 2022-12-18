@@ -92,7 +92,7 @@ const TechImg = styled.img`
 
 const StyledProfile = styled.p`
   width: auto;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 15vw 20px 15vw;
 `;
 
 export default Profile;

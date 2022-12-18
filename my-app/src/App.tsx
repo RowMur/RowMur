@@ -26,7 +26,7 @@ function App() {
   return (
     <StyledApp>
       <Header onClick={(i: number) => handleClick(i)} />
-      {page}
+      <StyledContent>{page}</StyledContent>
       <Footer />
     </StyledApp>
   );
@@ -40,6 +40,12 @@ const StyledApp = styled.div`
   position: relative;
   min-height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+`;
+
+const StyledContent = styled.a`
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 8vh;
 `;
 
 export default App;
