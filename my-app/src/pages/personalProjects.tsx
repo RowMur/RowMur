@@ -15,7 +15,7 @@ const PersonalProjects = () => {
           Pages.
           <br />
           Can be found at{" "}
-          <WebLink href="www.rowmur.com" color="#5b8291">
+          <WebLink href="https://rowmur.com/" color="#5b8291">
             www.rowmur.com
           </WebLink>
         </ProjectDesc>
