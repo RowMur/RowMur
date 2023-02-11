@@ -1,3 +1,3 @@
-# RowMur.github.io
+# Personal Website
 
-This is a repository for my personal website. It's a react app written in TypeScript.
+This repository is for my personal website which can be found [here](www.rowmur.com). It is a React project and is deployed using GitHub pages.

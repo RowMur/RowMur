@@ -19,7 +19,7 @@ function App() {
       <EducationSkills />,
       <AboutMe />,
     ];
-    setPage((page) => pages[i]);
+    setPage(pages[i]);
     return pages[i];
   };
 
@@ -38,14 +38,14 @@ const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 `;
 
 const StyledContent = styled.a`
   position: relative;
   min-height: 100vh;
-  padding-bottom: 8vh;
+  // padding-bottom: 8vh;
 `;
 
 export default App;
