@@ -1,51 +1,91 @@
-import React, { useState } from "react";
+import { colors } from "./globalStyles";
 import styled from "styled-components";
-import Header from "./header";
-import Footer from "./footer";
-import WorkExperience from "./pages/workExperience";
-import Profile from "./pages/Profile";
-import PersonalProjects from "./pages/personalProjects";
-import EducationSkills from "./pages/educationSkills";
-import AboutMe from "./pages/aboutMe";
+import LinkedIn from "./icons/linkedIn";
+import GitHub from "./icons/gitHub";
 
-function App() {
-  const [page, setPage] = useState(<Profile />);
-
-  const handleClick = (i: number) => {
-    const pages = [
-      <Profile />,
-      <WorkExperience />,
-      <PersonalProjects />,
-      <EducationSkills />,
-      <AboutMe />,
-    ];
-    setPage(pages[i]);
-    return pages[i];
-  };
-
+export const App = () => {
   return (
-    <StyledApp>
-      <Header onClick={(i: number) => handleClick(i)} />
-      <StyledContent>{page}</StyledContent>
-      <Footer />
-    </StyledApp>
+    <>
+      <Main id="main">
+        <Nav>
+          <Icon
+            href="https://www.linkedin.com/in/rowan-murray-303242246/"
+            target="_blank"
+          >
+            <LinkedIn />
+          </Icon>
+          <Icon href="https://github.com/RowMur" target="_blank">
+            <GitHub />
+          </Icon>
+        </Nav>
+        <TitleContainer>
+          <h1>
+            Hi, I'm <span>Rowan.</span>
+            <br />
+            I'm an applications engineer.
+          </h1>
+        </TitleContainer>
+      </Main>
+    </>
   );
-}
+};
 
-const StyledApp = styled.div`
-  color: #dfdce3;
-  background-color: #121212;
+const Main = styled.section`
+  background-color: ${colors.dark};
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  justify-content: flex-end;
+`;
+
+const Icon = styled.a`
   display: flex;
   flex-direction: column;
-  position: relative;
-  // min-height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: ${colors.light};
+  margin: 16px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+
+  svg {
+    @keyframes float {
+      from {
+        transform: translatey(0px);
+      }
+      to {
+        transform: translatey(-4px);
+      }
+    }
+
+    height: 36px;
+    width: auto;
+
+    :hover {
+      animation: float 0.1s ease-in forwards;
+    }
+  }
 `;
 
-const StyledContent = styled.a`
-  position: relative;
-  min-height: 100vh;
-  // padding-bottom: 8vh;
-`;
+const TitleContainer = styled.div`
+  width: 100%;
+  color: ${colors.white};
 
-export default App;
+  h1 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    span {
+      color: ${colors.light};
+    }
+  }
+`;
