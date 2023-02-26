@@ -39,13 +39,15 @@ const StyledSection = styled.section`
 
 const IconsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 40px;
+  align-items: center;
 
   svg {
     height: 48px;
     width: auto;
-    padding: 0 10px;
+    padding: 10px;
   }
 `;
 

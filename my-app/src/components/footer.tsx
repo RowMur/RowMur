@@ -8,7 +8,7 @@ import UpArrow from "../icons/upArrow";
 
 const Footer = () => {
   return (
-    <div style={{ padding: "20px 80px" }}>
+    <div style={{ padding: "20px 0", alignSelf: "center" }}>
       <FooterContainer>
         <Icon
           href="https://www.linkedin.com/in/rowan-murray-303242246/"
@@ -31,10 +31,11 @@ const FooterContainer = styled.div`
   background-color: ${colors.dark};
   border-radius: 40px;
   height: 80px;
+  width: min-content;
   box-shadow: 1px 1px black;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 `;
 
 export default Footer;

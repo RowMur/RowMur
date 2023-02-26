@@ -10,11 +10,7 @@ import Skills from "./components/skills";
 
 export const App = () => {
   return (
-    <div
-      style={{
-        background: `linear-gradient(30deg, ${colors.dark}, ${colors.blue})`,
-      }}
-    >
+    <StyledApp>
       <Main id="main">
         <Nav>
           <Icon
@@ -44,9 +40,13 @@ export const App = () => {
       <Projects />
       <Skills />
       <Footer />
-    </div>
+    </StyledApp>
   );
 };
+
+const StyledApp = styled.div`
+  background: linear-gradient(30deg, ${colors.dark}, ${colors.blue});
+`;
 
 const Main = styled.section`
   height: 100vh;
