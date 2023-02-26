@@ -2,10 +2,19 @@ import { colors } from "./globalStyles";
 import styled from "styled-components";
 import LinkedIn from "./icons/linkedIn";
 import GitHub from "./icons/gitHub";
+import DownArrow from "./icons/downArrow";
+
+import Projects from "./components/personalProjects";
+import Footer from "./components/footer";
+import Skills from "./components/skills";
 
 export const App = () => {
   return (
-    <>
+    <div
+      style={{
+        background: `linear-gradient(30deg, ${colors.dark}, ${colors.blue})`,
+      }}
+    >
       <Main id="main">
         <Nav>
           <Icon
@@ -25,15 +34,25 @@ export const App = () => {
             I'm an applications engineer.
           </h1>
         </TitleContainer>
+        <Icon
+          href="#projects"
+          style={{ marginTop: "auto", paddingBottom: "20px" }}
+        >
+          <DownArrow />
+        </Icon>
       </Main>
-    </>
+      <Projects />
+      <Skills />
+      <Footer />
+    </div>
   );
 };
 
 const Main = styled.section`
-  background-color: ${colors.dark};
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 0 80px;
 `;
@@ -46,7 +65,7 @@ const Nav = styled.nav`
   justify-content: flex-end;
 `;
 
-const Icon = styled.a`
+export const Icon = styled.a`
   display: flex;
   flex-direction: column;
   color: ${colors.light};
@@ -56,20 +75,12 @@ const Icon = styled.a`
   justify-content: center;
 
   svg {
-    @keyframes float {
-      from {
-        transform: translatey(0px);
-      }
-      to {
-        transform: translatey(-4px);
-      }
-    }
-
     height: 36px;
     width: auto;
+    align-self: center;
 
     :hover {
-      animation: float 0.1s ease-in forwards;
+      height: 40px;
     }
   }
 `;
@@ -77,12 +88,14 @@ const Icon = styled.a`
 const TitleContainer = styled.div`
   width: 100%;
   color: ${colors.white};
+  margin-top: auto;
 
   h1 {
     text-align: left;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.5;
+    margin: 0;
 
     span {
       color: ${colors.light};
