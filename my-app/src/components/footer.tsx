@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { colors } from "../globalStyles";
 import { Icon } from "../app";
 
-import LinkedIn from "../icons/linkedIn";
-import GitHub from "../icons/gitHub";
-import UpArrow from "../icons/upArrow";
+import LinkedIn from "../icons/LinkedIn";
+import GitHub from "../icons/GitHub";
+import Arrow from "../icons/Arrow";
 
 const Footer = () => {
   return (
@@ -19,8 +19,8 @@ const Footer = () => {
         <Icon href="https://github.com/RowMur" target="_blank">
           <GitHub />
         </Icon>
-        <Icon href="#main">
-          <UpArrow />
+        <Icon href="#main" style={{ rotate: "180deg" }}>
+          <Arrow />
         </Icon>
       </FooterContainer>
     </div>

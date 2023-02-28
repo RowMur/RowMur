@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { colors } from "../globalStyles";
+import { colors, widths } from "../globalStyles";
 
-import Html from "../icons/html";
-import Css from "../icons/css";
-import Javascript from "../icons/javascript";
-import Typescript from "../icons/typescript";
-import React from "../icons/react";
-import Python from "../icons/python";
-import Graphql from "../icons/graphql";
+import Html from "../icons/Html";
+import Css from "../icons/Css";
+import Javascript from "../icons/Javascript";
+import Typescript from "../icons/Typescript";
+import React from "../icons/React";
+import Python from "../icons/Python";
+import Graphql from "../icons/Graphql";
 
 const Skills = () => {
   return (
@@ -29,6 +29,10 @@ const Skills = () => {
 const StyledSection = styled.section`
   padding: 40px 80px;
   color: ${colors.white};
+
+  @media screen and (max-width: ${widths.phone}) {
+    padding: 40px 20px;
+  }
 
   h1 {
     margin: 0;

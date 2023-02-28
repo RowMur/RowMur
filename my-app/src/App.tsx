@@ -1,12 +1,13 @@
-import { colors } from "./globalStyles";
+import { colors, widths } from "./globalStyles";
 import styled from "styled-components";
-import LinkedIn from "./icons/linkedIn";
-import GitHub from "./icons/gitHub";
-import DownArrow from "./icons/downArrow";
+import LinkedIn from "./icons/LinkedIn";
+import GitHub from "./icons/GitHub";
+import Arrow from "./icons/Arrow";
 
-import Projects from "./components/personalProjects";
-import Footer from "./components/footer";
-import Skills from "./components/skills";
+import Projects from "./components/PersonalProjects";
+import Footer from "./components/Footer";
+import Skills from "./components/Skills";
+import Cube from "./components/Cube";
 
 export const App = () => {
   return (
@@ -34,12 +35,13 @@ export const App = () => {
           href="#projects"
           style={{ marginTop: "auto", paddingBottom: "20px" }}
         >
-          <DownArrow />
+          <Arrow />
         </Icon>
       </Main>
       <Projects />
       <Skills />
       <Footer />
+      <Cube />
     </StyledApp>
   );
 };
@@ -55,6 +57,11 @@ const Main = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 80px;
+  overflow: hidden;
+
+  @media screen and (max-width: ${widths.phone}) {
+    padding: 0 40px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -78,9 +85,11 @@ export const Icon = styled.a`
     height: 36px;
     width: auto;
     align-self: center;
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
 
     :hover {
-      height: 40px;
+      scale: 1.2;
     }
   }
 `;
@@ -99,6 +108,7 @@ const TitleContainer = styled.div`
 
     span {
       color: ${colors.light};
+      align-self: center;
     }
   }
 `;

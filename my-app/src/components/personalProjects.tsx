@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../globalStyles";
+import { colors, widths } from "../globalStyles";
 
 const Projects = () => {
   return (
@@ -13,6 +13,10 @@ const Projects = () => {
 const StyledSection = styled.section`
   padding: 40px 80px;
   color: ${colors.white};
+
+  @media screen and (max-width: ${widths.phone}) {
+    padding: 40px 40px;
+  }
 
   h1 {
     margin: 0;
