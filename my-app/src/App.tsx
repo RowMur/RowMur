@@ -41,7 +41,7 @@ export const App = () => {
       <Projects />
       <Skills />
       <Footer />
-      <Cube />
+      {/* <Cube /> */}
     </StyledApp>
   );
 };
